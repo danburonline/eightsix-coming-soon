@@ -4,12 +4,25 @@
   box-sizing: border-box;
 }
 
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
 body {
   font-family: 'Newsreader', Georgia, serif;
   color: #1a1a1a;
   line-height: 1.65;
   background: #fcfcfc;
-  padding: 3rem 1.5rem;
+  padding: 0 1.5rem 2rem;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
 }
@@ -20,7 +33,7 @@ body {
 }
 
 header {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
 }
 
 h1 {
@@ -31,24 +44,83 @@ h1 {
   color: #0a0a0a;
 }
 
+/* Hero Section */
+.header-hero {
+  margin: 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e8ecf4;
+  padding: 3.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.header-hero-text {
+  flex: 0 1 470px;
+  min-width: 0;
+}
+
+.header-hero-image {
+  max-width: 580px;
+  flex: 0 1 580px;
+  height: auto;
+  display: block;
+  transform: translateX(50px);
+  margin-left: -30px;
+}
+
+.value-prop {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 2rem;
+  line-height: 1.25;
+  color: #1a1a1a;
+  margin-bottom: 0.85rem;
+  font-weight: 600;
+}
+
+.value-prop-tagline {
+  font-size: 1.4rem;
+  line-height: 1.45;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 0;
+}
+
+/* Section Titles */
+.section-title {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #0a0a0a;
+  margin-bottom: 1.5rem;
+}
+
+/* Content Sections */
+.content-section {
+  margin-bottom: 3rem;
+}
+
+.content-section:last-of-type {
+  margin-bottom: 0;
+}
+
 .intro {
   font-size: 1.1rem;
   line-height: 1.7;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
   color: #2a2a2a;
-}
-
-.tagline {
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.01em;
 }
 
 figure {
   margin: 2.5rem 0;
 }
 
-img {
+figure img {
   max-width: 100%;
   height: auto;
   display: block;
@@ -61,10 +133,77 @@ p {
   color: #333;
 }
 
-.contact {
+/* Team Section */
+.team-section {
+  margin: 3rem 0;
+}
+
+.team-section .section-title {
+  margin-bottom: 1rem;
+}
+
+.team-intro {
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.team-member {
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+}
+
+.team-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  margin: 0 auto 0.75rem;
+  border-radius: 2px;
+  overflow: hidden;
+  background: #eee;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-name {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+}
+
+.team-credentials {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.75rem;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 0.35rem;
+}
+
+.team-role {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #5046e5;
+  margin-bottom: 0;
+}
+
+/* Footer */
+footer.contact {
   margin-top: 3rem;
   padding-top: 2rem;
   border-top: 1px solid #e8e8e8;
+  text-align: center;
 }
 
 .contact a {
@@ -91,4 +230,251 @@ a {
 
 a:hover {
   text-decoration-color: #1a1a1a;
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Large tablets and small desktops (< 1024px) */
+@media (max-width: 1024px) {
+  .header-hero {
+    padding: 3rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .header-hero-text {
+    flex: 0 1 420px;
+  }
+
+  .header-hero-image {
+    max-width: 480px;
+    flex: 0 1 480px;
+  }
+
+  .value-prop {
+    font-size: 1.75rem;
+  }
+
+  .value-prop-tagline {
+    font-size: 1.3rem;
+  }
+}
+
+/* Tablets (< 900px) - hero stacks */
+@media (max-width: 900px) {
+  .header-hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .header-hero-text {
+    flex: 0 1 auto;
+    max-width: 540px;
+  }
+
+  .header-hero-image {
+    width: auto;
+    max-width: 380px;
+    flex: 0 0 auto;
+    transform: none;
+  }
+
+  .value-prop {
+    font-size: 1.7rem;
+  }
+
+  .value-prop-tagline {
+    font-size: 1.25rem;
+  }
+
+  header {
+    margin-bottom: 3rem;
+  }
+}
+
+/* Small tablets (< 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 0 1.25rem 1.5rem;
+    font-size: 16px;
+  }
+
+  .header-hero {
+    padding: 2.25rem 1.25rem;
+  }
+
+  .header-hero-image {
+    max-width: 340px;
+  }
+
+  .value-prop {
+    font-size: 1.6rem;
+  }
+
+  .value-prop-tagline {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 1.05rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .intro {
+    font-size: 1.05rem;
+  }
+
+  figure {
+    margin: 2rem 0;
+  }
+
+  .team-section {
+    margin: 2.5rem 0;
+  }
+
+  .team-grid {
+    gap: 0.5rem;
+  }
+
+  .team-name {
+    font-size: 0.9rem;
+  }
+
+  .team-role {
+    font-size: 0.75rem;
+  }
+
+  footer.contact {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+  }
+}
+
+/* Mobile (< 640px) */
+@media (max-width: 640px) {
+  body {
+    padding: 0 1rem 1.5rem;
+  }
+
+  header {
+    margin-bottom: 2.5rem;
+  }
+
+  .header-hero {
+    padding: 2rem 1rem;
+    gap: 1.25rem;
+  }
+
+  .header-hero-image {
+    max-width: 300px;
+  }
+
+  .value-prop {
+    font-size: 1.45rem;
+    font-weight: 500;
+  }
+
+  .value-prop-tagline {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 1rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  figure {
+    margin: 1.75rem 0;
+  }
+
+  .team-section {
+    margin: 2rem 0;
+  }
+
+  .team-member {
+    padding: 0.5rem 0.25rem;
+  }
+
+  .team-name {
+    font-size: 0.85rem;
+  }
+
+  .team-role {
+    font-size: 0.7rem;
+  }
+}
+
+/* Small mobile (< 480px) */
+@media (max-width: 480px) {
+  .header-hero-image {
+    max-width: 260px;
+  }
+
+  .value-prop {
+    font-size: 1.35rem;
+  }
+
+  .value-prop-tagline {
+    font-size: 1rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+  }
+
+  .team-member {
+    padding: 0.5rem 0.15rem;
+  }
+
+  .team-name {
+    font-size: 0.8rem;
+  }
+
+  .team-role {
+    font-size: 0.65rem;
+  }
+}
+
+/* Extra small mobile (< 360px) */
+@media (max-width: 360px) {
+  body {
+    padding: 0 0.75rem 1rem;
+  }
+
+  .header-hero {
+    padding: 1.75rem 0.75rem;
+  }
+
+  .header-hero-image {
+    max-width: 220px;
+  }
+
+  .value-prop {
+    font-size: 1.25rem;
+  }
+
+  .value-prop-tagline {
+    font-size: 0.95rem;
+  }
+
+  .section-title {
+    font-size: 0.95rem;
+  }
+
+  .intro,
+  p {
+    font-size: 0.95rem;
+  }
 }

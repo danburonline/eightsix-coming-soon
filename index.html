@@ -6,15 +6,34 @@
     <meta name="theme-color" content="#fcfcfc" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="msapplication-TileColor" content="#fcfcfc" />
+    <!-- Block all search engines -->
     <meta
       name="robots"
-      content="noindex, nofollow, noarchive, nosnippet, noimageindex"
+      content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache"
     />
     <meta
       name="googlebot"
       content="noindex, nofollow, noarchive, nosnippet, noimageindex"
     />
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet" />
+    <!-- Block AI crawlers and chatbots -->
+    <meta name="GPTBot" content="noindex, nofollow" />
+    <meta name="ChatGPT-User" content="noindex, nofollow" />
+    <meta name="CCBot" content="noindex, nofollow" />
+    <meta name="anthropic-ai" content="noindex, nofollow" />
+    <meta name="Google-Extended" content="noindex, nofollow" />
+    <meta name="PerplexityBot" content="noindex, nofollow" />
+    <meta name="Bytespider" content="noindex, nofollow" />
+    <meta name="ClaudeBot" content="noindex, nofollow" />
+    <meta name="Omgilibot" content="noindex, nofollow" />
+    <meta name="Diffbot" content="noindex, nofollow" />
+    <meta name="FacebookBot" content="noindex, nofollow" />
+    <meta name="cohere-ai" content="noindex, nofollow" />
+    <!-- Block Internet Archive -->
+    <meta name="ia_archiver" content="noindex, nofollow" />
+    <meta name="archive.org_bot" content="noindex, nofollow" />
     <title>Eightsix Science</title>
+    <meta name="description" content="" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,44 +43,128 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1>Eightsix Science</h1>
-      </header>
+    <header>
+      <div class="header-hero">
+        <div class="header-hero-text">
+          <h1 class="value-prop">
+            Gradual brain replacement with engineered biohybrid tissue.
+          </h1>
+          <p class="value-prop-tagline">
+            Biohybridising the brain, preserving you<br />
+            throughout the transition.
+          </p>
+        </div>
+        <img
+          src="synthetic-brain.png"
+          alt="Synthetic biohybrid brain"
+          class="header-hero-image"
+          draggable="false"
+        />
+      </div>
+    </header>
 
-      <p class="intro">
-        <span class="tagline">Engineering neural tissue for brain repair.</span>
-        We're a team of neuroengineers and neuroscientists with strong AI
-        backgrounds. Our goal is to gradually replace damaged or aged neural
-        tissue with engineered grafts, preserving function throughout the
-        transition.
-      </p>
+    <main class="container">
+      <!-- About Section -->
+      <section class="content-section" aria-labelledby="about-heading">
+        <h2 id="about-heading" class="section-title">About Eightsix Science</h2>
 
-      <figure>
-        <img src="brain-replacement.png" alt="Brain replacement diagram" />
-      </figure>
+        <p>
+          We're a team of neuroengineers and neuroscientists with strong AI
+          backgrounds. The brain cannot regenerate lost tissue on its own. We're
+          building biohybrid grafts that integrate with existing neural circuits,
+          restoring function while preserving what makes you, you.
+        </p>
+      </section>
 
-      <p>
-        We work end-to-end: from generative AI and biophysical simulations,
-        through in vitro biofabrication, to surgical validation and procedure
-        design. Our platform takes patient brain scans as input, generates
-        cellular-resolution replacement tissue designs, and outputs fabrication
-        instructions. Target applications include tumour resection cavities,
-        stroke lesions, and traumatic brain injuries where neural tissue has
-        been lost.
-      </p>
+      <!-- How It Works Section -->
+      <section class="content-section" aria-labelledby="how-heading">
+        <h2 id="how-heading" class="section-title">How It Works</h2>
 
-      <p>
-        The core system combines generative AI models trained on digitised
-        neurons with physics-based growth simulations. The AI generates scaffold
-        architectures. A biophysics simulator predicts how cells will migrate,
-        differentiate, and form connections over weeks. We validate predictions
-        by fabricating tissue and testing integration in animal models.
-      </p>
+        <p>
+          We work end-to-end: from generative AI and biophysical simulations,
+          through in vitro biofabrication, to surgical validation and procedure
+          design. Our platform takes patient brain scans as input, generates
+          cellular-resolution replacement tissue designs, and outputs fabrication
+          instructions. Target applications include tumour resection cavities,
+          stroke lesions, and traumatic brain injuries where neural tissue has
+          been lost.
+        </p>
 
-      <p class="contact">
+        <figure>
+          <img src="brain-replacement.png" alt="Brain replacement diagram" draggable="false" />
+        </figure>
+
+        <p>
+          The biohybrid design does more than restore lost function. It unlocks
+          ultra high bandwidth brain-computer interfaces that conventional
+          electrodes cannot achieve. Traditional BCIs sit on top of neural tissue.
+          Ours becomes part of it. The interface is the substrate.
+        </p>
+      </section>
+
+      <section class="team-section" aria-labelledby="team-heading">
+        <h2 id="team-heading" class="section-title">Our Team</h2>
+        <p class="team-intro">
+          Biohybrid neural tissue sits at the intersection of neuroscience,
+          engineering, and medicine. Our team reflects that: neuroscientists who
+          understand circuit formation, engineers who can design and fabricate
+          grafts, and clinicians who know how to implant them. With backgrounds
+          from ETH/EPFL, Harvard, King's College London, and TU Munich.
+        </p>
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="team-photo">
+              <img src="team/daniel.jpeg" alt="Daniel Burger" />
+            </div>
+            <h3 class="team-name">Daniel Burger</h3>
+            <p class="team-role">CEO & Neuroengineer</p>
+          </div>
+
+          <div class="team-member">
+            <div class="team-photo">
+              <img src="team/michel.jpeg" alt="Michel Wälti" />
+            </div>
+            <h3 class="team-name">Michel Wälti</h3>
+            <p class="team-role">COO & Neuroscientist</p>
+          </div>
+
+          <div class="team-member">
+            <div class="team-photo">
+              <img src="team/mahmut.jpeg" alt="Mahmut Yüksel" />
+            </div>
+            <h3 class="team-name">Mahmut Yüksel</h3>
+            <p class="team-role">CMO & Neurologist</p>
+          </div>
+
+          <div class="team-member">
+            <div class="team-photo">
+              <img src="team/stefan.jpeg" alt="Stefan Dvoretskii" />
+            </div>
+            <h3 class="team-name">Stefan Dvoretskii</h3>
+            <p class="team-role">Neural Engineer</p>
+          </div>
+
+          <div class="team-member">
+            <div class="team-photo">
+              <img src="team/kenta.jpeg" alt="Kentaroh Takagaki" />
+            </div>
+            <h3 class="team-name">Kentaroh Takagaki</h3>
+            <p class="team-role">Neuroanatomist</p>
+          </div>
+
+          <div class="team-member">
+            <div class="team-photo">
+              <img src="team/maarten.jpeg" alt="Maarten Pennings" />
+            </div>
+            <h3 class="team-name">Maarten Pennings</h3>
+            <p class="team-role">Cell Biologist</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="contact">
         <a href="mailto:contact@eightsix.science">contact@eightsix.science</a>
-      </p>
-    </div>
+      </footer>
+    </main>
   </body>
 </html>
