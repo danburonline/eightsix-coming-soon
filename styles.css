@@ -52,42 +52,69 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   background: #e8ecf4;
-  padding: 3.5rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-}
-
-.header-hero-text {
-  flex: 0 1 470px;
-  min-width: 0;
-}
-
-.header-hero-image {
-  max-width: 580px;
-  flex: 0 1 580px;
-  height: auto;
-  display: block;
-  transform: translateX(50px);
-  margin-left: -30px;
+  padding: 7rem 2rem;
+  text-align: center;
 }
 
 .value-prop {
   font-family: 'Newsreader', Georgia, serif;
-  font-size: 2rem;
-  line-height: 1.25;
+  font-size: 2.5rem;
+  line-height: 1.2;
   color: #1a1a1a;
-  margin-bottom: 0.85rem;
-  font-weight: 600;
+  margin: 0 auto 1rem;
+  font-weight: 500;
+  max-width: 720px;
+}
+
+/* Term highlight with tooltip */
+.term-highlight {
+  text-decoration: underline;
+  text-decoration-color: #888;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  cursor: help;
+  position: relative;
+  transition: text-decoration-color 0.2s ease;
+}
+
+.term-highlight:hover {
+  text-decoration-color: #1a1a1a;
+}
+
+.term-highlight::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  background: #1a1a1a;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  font-style: normal;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.term-highlight:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .value-prop-tagline {
-  font-size: 1.4rem;
-  line-height: 1.45;
+  font-size: 1.35rem;
+  line-height: 1.5;
   font-style: italic;
   color: #555;
-  margin-bottom: 0;
+  margin: 0 auto;
+  max-width: 480px;
 }
 
 /* Section Titles */
@@ -239,54 +266,14 @@ a:hover {
    RESPONSIVE BREAKPOINTS
    ======================================== */
 
-/* Large tablets and small desktops (< 1024px) */
-@media (max-width: 1024px) {
-  .header-hero {
-    padding: 3rem 1.5rem;
-    gap: 1.5rem;
-  }
-
-  .header-hero-text {
-    flex: 0 1 420px;
-  }
-
-  .header-hero-image {
-    max-width: 480px;
-    flex: 0 1 480px;
-  }
-
-  .value-prop {
-    font-size: 1.75rem;
-  }
-
-  .value-prop-tagline {
-    font-size: 1.3rem;
-  }
-}
-
-/* Tablets (< 900px) - hero stacks */
+/* Tablets (< 900px) */
 @media (max-width: 900px) {
   .header-hero {
-    flex-direction: column-reverse;
-    text-align: center;
-    padding: 2.5rem 1.5rem;
-    gap: 1.5rem;
-  }
-
-  .header-hero-text {
-    flex: 0 1 auto;
-    max-width: 540px;
-  }
-
-  .header-hero-image {
-    width: auto;
-    max-width: 380px;
-    flex: 0 0 auto;
-    transform: none;
+    padding: 5.5rem 1.5rem;
   }
 
   .value-prop {
-    font-size: 1.7rem;
+    font-size: 2.2rem;
   }
 
   .value-prop-tagline {
@@ -306,19 +293,20 @@ a:hover {
   }
 
   .header-hero {
-    padding: 2.25rem 1.25rem;
-  }
-
-  .header-hero-image {
-    max-width: 340px;
+    padding: 4.5rem 1.25rem;
   }
 
   .value-prop {
-    font-size: 1.6rem;
+    font-size: 1.9rem;
   }
 
   .value-prop-tagline {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+  }
+
+  .term-highlight::after {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.85rem;
   }
 
   .section-title {
@@ -367,21 +355,22 @@ a:hover {
   }
 
   .header-hero {
-    padding: 2rem 1rem;
-    gap: 1.25rem;
-  }
-
-  .header-hero-image {
-    max-width: 300px;
+    padding: 4rem 1rem;
   }
 
   .value-prop {
-    font-size: 1.45rem;
-    font-weight: 500;
+    font-size: 1.65rem;
   }
 
   .value-prop-tagline {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+  }
+
+  .term-highlight::after {
+    white-space: normal;
+    width: max-content;
+    max-width: 200px;
+    text-align: center;
   }
 
   .section-title {
@@ -420,12 +409,8 @@ a:hover {
 
 /* Small mobile (< 480px) */
 @media (max-width: 480px) {
-  .header-hero-image {
-    max-width: 260px;
-  }
-
   .value-prop {
-    font-size: 1.35rem;
+    font-size: 1.45rem;
   }
 
   .value-prop-tagline {
@@ -458,15 +443,11 @@ a:hover {
   }
 
   .header-hero {
-    padding: 1.75rem 0.75rem;
-  }
-
-  .header-hero-image {
-    max-width: 220px;
+    padding: 3.5rem 0.75rem;
   }
 
   .value-prop {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 
   .value-prop-tagline {
