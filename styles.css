@@ -181,9 +181,29 @@ p {
   gap: 0.75rem;
 }
 
-.team-member {
+.team-grid--leadership {
+  margin-bottom: 0.75rem;
+}
+
+.team-grid--leadership .team-role {
+  font-weight: 400;
+}
+
+.team-grid--leadership .team-role strong {
+  font-weight: 600;
+}
+
+.team-grid--leadership .team-member {
   flex: 0 0 calc((100% - 1.5rem) / 3);
   max-width: calc((100% - 1.5rem) / 3);
+}
+
+.team-grid--members .team-member {
+  flex: 0 0 calc((100% - 2.25rem) / 4);
+  max-width: calc((100% - 2.25rem) / 4);
+}
+
+.team-member {
   text-align: center;
   padding: 0.75rem 0.5rem;
 }
@@ -421,9 +441,12 @@ a:hover {
     gap: 0.4rem;
   }
 
-  .team-member {
+  .team-grid--members .team-member {
     flex: 0 0 calc((100% - 0.4rem) / 2);
     max-width: calc((100% - 0.4rem) / 2);
+  }
+
+  .team-member {
     padding: 0.5rem 0.15rem;
   }
 
