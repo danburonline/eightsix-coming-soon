@@ -414,6 +414,18 @@ a:hover {
     margin: 2rem 0;
   }
 
+  .team-grid--leadership .team-member,
+  .team-grid--members .team-member {
+    flex: 0 0 calc((100% - 0.75rem) / 2);
+    max-width: calc((100% - 0.75rem) / 2);
+  }
+
+  .team-photo {
+    max-width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .team-member {
     padding: 0.5rem 0.25rem;
   }
@@ -441,9 +453,8 @@ a:hover {
     gap: 0.4rem;
   }
 
-  .team-grid--members .team-member {
-    flex: 0 0 calc((100% - 0.4rem) / 2);
-    max-width: calc((100% - 0.4rem) / 2);
+  .team-photo {
+    max-width: 140px;
   }
 
   .team-member {
